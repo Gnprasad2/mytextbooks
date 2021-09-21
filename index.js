@@ -1,6 +1,6 @@
 window.addEventListener('message', event => {
     // IMPORTANT: check the origin of the data! 
-    if (event.origin.startsWith('https://n-vokklzzb4awmhctgfsi5lzdbm3ftw54nxpszg2y-0lu-script.googleusercontent.com/userCodeAppPanel')) { 
+    if (event.origin.startsWith('https://script.google.com/')) { 
         // The data was sent from your site.
         // Data sent with postMessage is stored in event.data:
         console.log(event.data); 
