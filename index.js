@@ -13,6 +13,10 @@ window.addEventListener('message', event => {
     } 
 }); 
 
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+});
+
 
 //  google translation
 
