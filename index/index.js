@@ -453,9 +453,9 @@ function googleTranslateElementInit() {
 
   window.onload = (event) => {
     M.AutoInit();
-    event.preventDefault();
+   
     alert(window.location);
-    alert(window.parent.location);
+    alert(window.top.location);
   };
 
 
