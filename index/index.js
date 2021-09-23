@@ -458,8 +458,7 @@ function googleTranslateElementInit() {
       window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
     }
     
-    console.log(window.location.href);
-    console.log(window.parent.location.href);
+    
    
     
   };
