@@ -453,9 +453,12 @@ function googleTranslateElementInit() {
 
   window.onload = (event) => {
     M.AutoInit();
+    
+    if(window.location == window.top.location) {
+      window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
+    }
    
-    alert(window.location);
-    alert(window.top.location);
+    
   };
 
 
