@@ -17,13 +17,13 @@ text-decoration:underline;
 .toc0
 {
 display: block;
-margin-left: 0pt
+margin-left: 3pt
 }
 
 .toc1
 {
 display: block;
-margin-left: 10pt
+margin-left: 13pt
 }
 
 
@@ -38,3 +38,4 @@ margin-left: 20pt
 content: "• ";
 }
 
+ul {text-align: justify;}
