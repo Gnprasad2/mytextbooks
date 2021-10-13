@@ -452,7 +452,7 @@ function googleTranslateElementInit() {
     'hi,as,bh,bn,dz,gu,kn,ks,ml,mr,ne,or,pa,te,ta,ur,sa,sd,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
   }
 
-  document.onload = (event) => {
+  window.onload = (event) => {
     M.AutoInit();
     
     if(window.location == window.top.location) {
