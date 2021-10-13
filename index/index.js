@@ -452,12 +452,12 @@ function googleTranslateElementInit() {
     'hi,as,bh,bn,dz,gu,kn,ks,ml,mr,ne,or,pa,te,ta,ur,sa,sd,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
   }
 
-  window.onload = (event) => {
+  document.onload = (event) => {
     M.AutoInit();
     
-//     if(window.location == window.top.location) {
-//       window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
-//     }
+    if(window.location == window.top.location) {
+      window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
+    }
     
     
    
