@@ -129,7 +129,8 @@
           // var regex = /\.^\D/g;
       
   
-        var myArr = str.split('.');
+//         var myArr = str.split('.');
+         var myArr = str.split(/[\.:]/g);
   
         // var myArr = str.split(regex);
   
@@ -454,9 +455,9 @@ function googleTranslateElementInit() {
   window.onload = (event) => {
     M.AutoInit();
     
-    if(window.location == window.top.location) {
-      window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
-    }
+//     if(window.location == window.top.location) {
+//       window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
+//     }
     
     
    
