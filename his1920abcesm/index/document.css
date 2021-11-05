@@ -94,7 +94,7 @@
  .s97 { color: black; font-family:Arial, sans-serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 110%; }
  .s98 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 110%; }
  .s99 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 110%; }
- .s100 { color: #FFF280; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15.5pt; }
+ .s100 { color: #FFF280; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none;   font-size: 125%; }
  .s101 { color: #FFF280; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 110%; }
  .s102 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 110%; vertical-align: 1pt; }
  .s104 { color: black; font-family:Arial, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 110%; vertical-align: 5pt; }
@@ -111,16 +111,16 @@
  .s115 { color: #B1A200; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 110%; }
  .s116 { color: black; font-family:Cambria, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 110%; }
  table, tbody {vertical-align: top; overflow: visible; }
- .notranslate li {text-align: justify; display:inline;}
+.notranslate li {text-align: justify; display:inline;}
  .noDisplay {display: none;}
  html {  background-color: rgb(255, 219, 140); } 
 body {
     min-height: 100vh;
-    max-width: 600px;
+    max-width: 750px;
     background-color:ivory;
     margin: 0px auto;
     padding-right: 30px;
-    padding-left: 10px;
+    padding-left: 30px;
     
     
 }
