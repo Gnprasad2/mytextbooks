@@ -10,17 +10,7 @@
   var amIPending = false;
   var amISpeaking = synth.speaking;
   var amIPaused = false;
-  var answerSpeaker= document.getElementById("answerSpeak");
   var os; // operating system
-  var answeSpeaking;
-  var mainSection = document.getElementsByClassName("main")[0];
-  var speakTranslateSection = document.getElementsByClassName("notranslate")[0];
-  // Global event listeners
-
-document.addEventListener('dblclick', function(e) {
-  speakTranslateSection.classList.toggle('noDisplay');
-})
-
   
   
   
@@ -29,7 +19,7 @@ document.addEventListener('dblclick', function(e) {
   
   const getVoices = () => {
     voices = synth.getVoices();
-    // console.log(voices);
+    console.log(voices);
     os = getOperatingSystem();
     
   
@@ -59,7 +49,7 @@ document.addEventListener('dblclick', function(e) {
   
   
       var selectedVoiceArr = voices.filter(function(voice) {
-          // console.log(voice);
+          console.log(voice);
           // || voice.localService == true
           let userAgentString = navigator.userAgent;
           if(voice.default == true || voice.lang == 'hi-IN' || voice.localService == true){
@@ -128,14 +118,13 @@ document.addEventListener('dblclick', function(e) {
       
   
           const str = textInputForSpeech;
+         
   
-      if(str.length > 190 && selectedVoice.localService == false) {
-        // if(str.length > 170 ) {
+      if(str.length > 190 && selectedVoice.localService == false) { 
   
-          // var regex = /\.^\D/g;
-      
-  
-        var myArr = str.split('.');
+         
+       
+        var myArr = str.split(/[\.:]/g);
   
         // var myArr = str.split(regex);
   
@@ -207,7 +196,7 @@ document.addEventListener('dblclick', function(e) {
   
       // Speak error
       speakText.onerror = e => {
-        // console.error('Something went wrong');
+        console.error('Something went wrong');
       };
   
       // Loop through voices
@@ -262,10 +251,10 @@ document.addEventListener('dblclick', function(e) {
             // console.log(`am i pending: ${amIPending}, ${index}`);
             // console.log(`am i speaking: ${amISpeaking}, ${index}`);
             //  console.log(`am i paused: ${amIPaused}, ${index}`);
-            // console.log(utterText);
+            console.log(utterText);
   
              speakText.onend = e => {
-              //  console.log('Done speaking...');
+               console.log('Done speaking...');
              
         
         // body.style.background = '#141414';
@@ -280,7 +269,7 @@ document.addEventListener('dblclick', function(e) {
   
   
   function arrSpeak(newArr=[]) {
-  
+    
     newArr.forEach(function(utterText, index) {
             if (utterText.length < 190) {
               eachSpeak(utterText, index);
@@ -291,7 +280,7 @@ document.addEventListener('dblclick', function(e) {
                let string = utterTextN;
                 let numParts = parseInt(string.length/190) + 1;
                 let m = parseInt(string.length/numParts) + 1;
-                // console.log(`m value is ${m}, sringlength:${string.length}`);
+                console.log(`m value is ${m}, sringlength:${string.length}`);
                 let start = 0;
                 for( let i = 0; i < numParts; i++) {
   
@@ -380,8 +369,8 @@ document.addEventListener('dblclick', function(e) {
       // var textInputForSpeech = mcqs[currentQuestionNo - 1].answerToSpeak;
     var textInputForSpeech = mainSection.textContent;
     answeSpeaking = true;
+    gsSpeak(` ${textInputForSpeech}. explanation to question number ${mcqs[currentQuestionNo - 1].qnum}  over.`);
     document.getElementById("answerSpeakI").textContent = "stop";
-    gsSpeak(` ${textInputForSpeech}.  over.`);
     document.getElementById("pause-resume").textContent="pause";
     
     } else {
@@ -436,11 +425,11 @@ document.addEventListener('dblclick', function(e) {
   function getOperatingSystem() {
   
       var os = "Unknown OS";
-          if (navigator.userAgent.indexOf("Win") != -1) { os = "Windows OS"; }
-          if (navigator.userAgent.indexOf("Mac") != -1) { os = "Macintosh"; }
-          if (navigator.userAgent.indexOf("Linux") != -1) { os = "Linux OS"; }
-          if (navigator.userAgent.indexOf("Android") != -1) { os = "Android OS"; }
-          if (navigator.userAgent.indexOf("like Mac") != -1) { os = "iOS"; }
+      if (navigator.userAgent.indexOf("Win") != -1) { os = "Windows OS"; }
+      if (navigator.userAgent.indexOf("Mac") != -1) { os = "Macintosh"; }
+      if (navigator.userAgent.indexOf("Linux") != -1) { os = "Linux OS"; }
+      if (navigator.userAgent.indexOf("Android") != -1) { os = "Android OS"; }
+      if (navigator.userAgent.indexOf("like Mac") != -1) { os = "iOS"; }
   
       // alert(os);
       return os;
@@ -470,9 +459,9 @@ function googleTranslateElementInit() {
       synth.cancel();  
     }  
     
-    if(window.location == window.top.location) {
-      window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
-    }
+    // if(window.location == window.top.location) {
+    //   window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
+    // }
 
   };
 
