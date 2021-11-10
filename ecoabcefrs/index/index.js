@@ -470,9 +470,9 @@ function googleTranslateElementInit() {
       synth.cancel();  
     }  
     
-    if(window.location == window.top.location) {
-      window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
-    }
+    // if(window.location == window.top.location) {
+    //   window.location = "https://script.google.com/macros/s/AKfycbyaV7YNwZLEfpRagpgkMctfJPrwjACjoOP5fmumjcc/dev";
+    // }
 
   };
 

@@ -476,14 +476,6 @@ function googleTranslateElementInit() {
 
   };
 
-  function hideImage(img) {
-    img.style.display = "none";
-    console.log("hide image functionn executed");
-    
-  }
-
-
-
 
 
   
