@@ -377,14 +377,19 @@
  table, tbody {vertical-align: top; overflow: visible; }
 .notranslate li {text-align: justify; display:inline;}
  .noDisplay {display: none;}
- html {  background-color: rgb(255, 219, 140); } 
-body {
-    min-height: 100vh;
-    max-width: 850px;
-    background-color:ivory;
-    margin: 0px auto;
-    padding-right: 30px;
-    padding-left: 30px;
+ html {  background-color:ivory;  } 
+ body {
+     min-height: 100vh;
+     /* max-width: 850px; */
+     
+     max-width:960px;
+     text-align:justify;
     
-    
-}
+     
+     background-color:ivory;
+     margin: 0px auto;
+     padding-right:8%;
+     padding-left: 8%;
+     
+     font-family:'Times New Roman', Times, serif;
+ }
